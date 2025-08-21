@@ -1,0 +1,165 @@
+/* --- General Governance Page Styling --- */
+.governance-page {
+  font-family: 'Arial', sans-serif; /* Consistent font */
+  max-width: 900px; /* Slightly narrower for focused content */
+  margin: 0 auto; /* Center the page */
+  padding: 130px 1.5rem 4rem; /* Ample padding */
+  color: #333; /* Default text color */
+  line-height: 1.7; /* Good line height for readability */
+}
+
+.governance-page h1 {
+  text-align: center;
+  color: #2c3e50; /* Strong heading color */
+  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.governance-page > p:first-of-type { /* Target the introductory paragraph */
+  text-align: center;
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 3.5rem; /* Space before the first section */
+  max-width: 700px; /* Limit width for this intro paragraph */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Section Headings for Policies --- */
+.governance-page h2 {
+  color: #34495e; /* A slightly darker blue-gray for sub-headings */
+  font-size: 2rem;
+  margin-top: 3rem; /* Space above each new section */
+  margin-bottom: 1rem;
+  display: flex; /* Allow icon and text on the same line */
+  align-items: center; /* Vertically align icon and text */
+  gap: 0.8rem; /* Space between icon and text */
+  border-bottom: 2px solid #ecf0f1; /* Subtle line under headings */
+  padding-bottom: 0.5rem;
+}
+
+/* Specific icon styling for h2 (adjust font-size if your emoji is too big/small) */
+.governance-page h2 span {
+    font-size: 1.8rem; /* Make emoji slightly smaller than heading text */
+    line-height: 1; /* Align emoji properly */
+}
+
+
+.governance-page h2:first-of-type { /* Less top margin for the first h2 */
+  margin-top: 1.5rem;
+}
+
+.governance-page p {
+  font-size: 1.05rem;
+  margin-bottom: 2rem; /* Space below each policy description */
+  color: #444;
+}
+
+/* --- Key Policies List --- */
+.governance-page h2:last-of-type { /* Style for "Key Policies" heading */
+    margin-bottom: 2rem; /* More space before the list */
+}
+
+.governance-page ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.governance-page li {
+  margin-bottom: 1rem;
+}
+
+.governance-page li a {
+  display: block; /* Make the whole list item clickable */
+  background-color: #f0f8ff; /* Light blue background for links */
+  border: 1px solid #d0e8f8; /* Light blue border */
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none; /* Remove underline */
+  color: #007bff; /* Standard link blue */
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+.governance-page li a:hover {
+  background-color: #e0f0ff; /* Slightly darker blue on hover */
+  border-color: #a0cff0;
+  transform: translateY(-2px); /* Lift slightly on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+}
+
+.governance-page li a:active {
+  transform: translateY(0); /* Press down effect */
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .governance-page {
+    padding: 2rem 1.5rem;
+  }
+
+  .governance-page h1 {
+    font-size: 2.2rem;
+  }
+
+  .governance-page > p:first-of-type {
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .governance-page h2 {
+    font-size: 1.7rem;
+    margin-top: 2.5rem;
+  }
+
+  .governance-page p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .governance-page li a {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .governance-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .governance-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .governance-page > p:first-of-type {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .governance-page h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    gap: 0.5rem;
+  }
+
+  .governance-page h2 span {
+    font-size: 1.3rem;
+  }
+
+  .governance-page p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .governance-page li a {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+  }
+}
+

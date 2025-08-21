@@ -1,0 +1,97 @@
+/* App.css */
+
+/* --- Global Variables (Color Palette) --- */
+:root {
+  /* Primary Colors - often for branding, main CTAs, active states */
+  --primary-color: #1a73e8; /* A strong, clear blue (e.g., original text-blue-600) */
+  --primary-color-dark: #0f4c81; /* Darker shade for hover/active */
+  --primary-color-light: #6aa8f7; /* Lighter shade for accents or icons on dark backgrounds */
+
+  /* Secondary Colors - for alternative CTAs, highlights, contrasting elements */
+  --secondary-color: #28a745; /* A vibrant green (e.g., from Donate button) */
+  --secondary-color-dark: #1e7e34; /* Darker green for hover/active */
+
+  /* Text Colors */
+  --text-color-dark: #333333; /* Dark grey for main body text, strong readability */
+  --text-color-medium: #555555; /* Medium grey for less prominent text */
+  --text-color-light: #ffffff; /* White text, typically for dark backgrounds */
+  --text-color-subtle: #777777; /* For small print, subtle details */
+
+  /* Background Colors */
+  --background-light: #ffffff; /* Pure white for main content backgrounds */
+  --background-dark: #f8f9fa; /* A very light grey/off-white for sections or subtle contrast */
+  --background-accent: #e9ecef; /* A slightly darker light grey for subtle distinctions */
+
+  /* Border Colors */
+  --border-color: #e0e0e0; /* Light grey for borders and separators */
+
+  /* Footer Specific Colors (re-defined from Footer.css for clarity) */
+  --footer-bg-color: var(--background-dark); /* Light background for footer */
+  --footer-text-color: var(--text-color-dark); /* Dark text for footer */
+  --footer-border-color: var(--border-color); /* Light border for footer */
+}
+
+/* --- Universal Box-Sizing --- */
+/* This makes sure padding and borders are included in the element's total width and height */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* --- Basic Body Styles --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif; /* Example font, replace with your chosen font */
+  color: var(--text-color-dark);
+  background-color: var(--background-light);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased; /* Improves font rendering on macOS/iOS */
+  -moz-osx-font-smoothing: grayscale; /* Improves font rendering on macOS/iOS */
+}
+
+/* --- App Layout (Sticky Footer) --- */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the container takes at least the full viewport height */
+}
+
+.main-content {
+  flex-grow: 1; /* Allows the main content area to expand and push the footer down */
+  /* Add consistent horizontal padding for content that spans full width */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  /* Max width for content within main, similar to max-w-7xl for consistency */
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; /* Ensure it respects max-width */
+}
+
+/* Responsive padding for main content */
+@media (max-width: 768px) {
+  .main-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* --- Global Heading Styles (Optional, for consistency if not component-specific) --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* Example heading font */
+  color: var(--primary-color); /* Headings default to primary color */
+  line-height: 1.2;
+  margin-top: 0; /* Reset default margins */
+}
+
+/* --- Global Link Styles (Optional, for general links outside components) --- */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color-dark);
+  text-decoration: underline;
+}

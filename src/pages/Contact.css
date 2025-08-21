@@ -1,0 +1,147 @@
+/* Contact.css */
+
+/* --- Contact Section Container --- */
+.contact-section-container {
+  padding: 130px 1.5rem 4rem;/* Consistent padding with other pages */
+  max-width: 48rem; /* A good max-width for forms, adjust as needed */
+  margin-left: auto;
+  margin-right: auto; /* Centers the content */
+  color: var(--text-color-dark); /* Default text color */
+  line-height: 1.6;
+}
+
+/* --- Contact Heading --- */
+.contact-heading {
+  font-size: 2.2em; /* Consistent with other page headings */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* --- Introductory Paragraph --- */
+.contact-intro-paragraph {
+  font-size: 1.05em;
+  margin-bottom: 2rem; /* More space before the form starts */
+  text-align: center;
+}
+
+/* --- Contact Form --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Translates space-y-4 (1rem) by using gap for flex children */
+  background-color: var(--background-dark); /* Light grey background for the form area */
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* A slightly more prominent shadow for the form block */
+}
+
+/* --- Form Inputs (Name, Email) --- */
+.contact-input,
+.contact-textarea {
+  width: 100%; /* Equivalent to w-full */
+  padding: 0.8em 1em; /* Adjusted padding for better visual balance */
+  border: 1px solid var(--border-color); /* Equivalent to border */
+  border-radius: 8px; /* Equivalent to rounded, consistent with App.css cards */
+  font-family: var(--font-family-sans); /* Use consistent font */
+  font-size: 1em;
+  color: var(--text-color-dark);
+  background-color: var(--background-light); /* White background for input fields */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on focus */
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: #a0aec0; /* Lighter placeholder text */
+  opacity: 1; /* Firefox default opacity */
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  outline: none; /* Remove default outline */
+  border-color: var(--primary-color); /* Highlight border on focus with primary color */
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.2); /* Subtle glow on focus */
+}
+
+/* --- Textarea specific styles --- */
+.contact-textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  min-height: 120px; /* Ensure a decent starting height */
+}
+
+/* --- Submit Button --- */
+.contact-submit-button {
+  /* Inherits base button styles from App.css */
+  background-color: var(--primary-color); /* Overrides bg-blue-600 with App.css primary */
+  color: var(--text-color-light); /* Overrides text-white with App.css light text */
+  padding: 0.8em 1.8em; /* Using App.css button padding for consistency */
+  border: none; /* Already in App.css, but good to be explicit */
+  border-radius: 5px; /* Already in App.css, but good to be explicit */
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  align-self: flex-start; /* Align button to the left within the form */
+  max-width: fit-content; /* Only take width of content */
+}
+
+.contact-submit-button:hover {
+  background-color: #003f80; /* Darker primary color on hover */
+  transform: translateY(-2px);
+}
+
+.contact-submit-button:active {
+  background-color: #002d5a;
+  transform: translateY(0);
+}
+
+
+/* --- Responsive Adjustments for Contact Page --- */
+@media (max-width: 768px) {
+  .contact-section-container {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .contact-heading {
+    font-size: 1.8em;
+  }
+
+  .contact-intro-paragraph {
+    font-size: 1em;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 1.8rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section-container {
+    padding: 2rem 1rem;
+  }
+
+  .contact-heading {
+    font-size: 1.6em;
+  }
+
+  .contact-form {
+    padding: 1.2rem;
+  }
+
+  .contact-input,
+  .contact-textarea {
+    padding: 0.6em 0.8em;
+  }
+
+  .contact-submit-button {
+    width: 100%; /* Make button full width on very small screens */
+    text-align: center;
+    align-self: stretch; /* Stretch to fill available width */
+    padding: 0.8em 1em;
+  }
+}

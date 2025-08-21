@@ -1,0 +1,17 @@
+.founder-bio {
+  max-width: 65ch;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.7;
+  color: #111827;
+}
+
+.founder-bio header {
+  text-align: center;
+}
+
+.founder-bio img {
+  max-width: 100%;
+  border-radius: 50%;
+}

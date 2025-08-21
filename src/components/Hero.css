@@ -1,0 +1,126 @@
+/* Hero.css */
+
+/* --- Hero Section Container --- */
+.hero-section {
+  background-color: #1E88E5; /* Vibrant Blue */
+  color: #FFFFFF; /* Neutral White */
+  padding: 7rem 1.5rem; /* Generous vertical padding and px-6 */
+  text-align: center; /* Equivalent to text-center */
+  display: flex; /* Use flexbox to easily center content block */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 50vh; /* Ensure it takes at least half the viewport height */
+  position: relative; /* For potential background effects */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* --- Hero Content Wrapper (for text and button) --- */
+.hero-content {
+  max-width: 800px; /* Constrain content width for readability */
+  margin: 0 auto; /* Center the content block */
+  z-index: 2; /* Ensure content is above any background effects */
+}
+
+/* --- Hero Heading (H1) --- */
+.hero-heading {
+  font-size: 2.5em; /* A very large, impactful size */
+  font-weight: 500; /* Equivalent to font-bold */
+  margin-bottom: 1rem; /* Equivalent to mb-4 */
+  line-height: 0.7; /* Tighter line height for large headings */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
+}
+
+/* --- Hero Subheading (Paragraph) --- */
+.hero-subheading {
+  font-size: 1.4em; /* Prominent but readable */
+  margin-bottom: 2.5rem; /* Slightly more for button separation */
+  line-height: 1.5;
+  max-width: 650px; /* Slightly narrower max-width for subheading readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Call-to-Action Button --- */
+.hero-cta-button {
+  display: inline-block; /* Allows padding and margins */
+  background-color: #FFFFFF; /* Neutral White */
+  color: #1E88E5; /* Vibrant Blue */
+  padding: 0.8em 2em; /* Slightly more padding for a bolder button */
+  border-radius: 5px; /* Consistent with App.css buttons */
+  text-decoration: none; /* Remove underline */
+  font-weight: 600; /* Bolder text */
+  font-size: 1.1em; /* Slightly larger text for CTA */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.hero-cta-button:hover {
+  background-color: #F5F5F5; /* Lightened Neutral White */
+  transform: translateY(-3px); /* Subtle lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.hero-cta-button:active {
+  background-color: #E0E0E0; /* Even darker light gray on active */
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+  .hero-section {
+    padding: 6rem 1.5rem;
+    min-height: 45vh;
+  }
+
+  .hero-heading {
+    font-size: 3em;
+  }
+
+  .hero-subheading {
+    font-size: 1.2em;
+    margin-bottom: 2rem;
+  }
+
+  .hero-cta-button {
+    padding: 0.7em 1.8em;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 5rem 1rem;
+    min-height: 40vh;
+  }
+
+  .hero-heading {
+    font-size: 2.5em;
+    line-height: 1.2;
+  }
+
+  .hero-subheading {
+    font-size: 1.1em;
+    margin-bottom: 1.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-section {
+    padding: 4rem 0.8rem;
+    min-height: 35vh;
+  }
+
+  .hero-heading {
+    font-size: 2em;
+  }
+
+  .hero-subheading {
+    font-size: 1em;
+  }
+
+  .hero-cta-button {
+    padding: 0.6em 1.5em;
+    font-size: 0.95em;
+  }
+}

@@ -1,0 +1,100 @@
+/* GetInvolved.css */
+
+/* --- Get Involved Section Container --- */
+.get-involved-section-container {
+  padding: 130px 1.5rem 4rem;/* Equivalent to py-12 (3rem top/bottom) and px-6 (1.5rem left/right) */
+  max-width: 56rem; /* Equivalent to max-w-4xl (896px), centers the content */
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text-color-dark); /* Default text color for the section */
+  line-height: 1.6; /* Ensure good readability */
+}
+
+/* --- Get Involved Heading --- */
+.get-involved-heading {
+  /* Inherits font-family and base color from global h2 in App.css */
+  font-size: 2.2em; /* Using App.css's general h2 size for consistency */
+  font-weight: 700; /* Equivalent to font-bold */
+  margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+  text-align: center; /* Center the heading */
+  color: var(--primary-color); /* Use primary brand color */
+}
+
+/* --- Introductory Paragraph --- */
+.get-involved-intro-paragraph {
+  font-size: 1.1em; /* Slightly larger than base text for emphasis */
+  margin-bottom: 1.5rem; /* Adjusted slightly for better spacing before the list */
+  text-align: center; /* Center this introductory text as well */
+  max-width: 48rem; /* Optional: limit width for readability on very wide screens */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Get Involved List --- */
+.get-involved-list {
+  list-style: none; /* Remove default bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.get-involved-list li {
+  font-size: 1.05em; /* Slightly adjusted font size for list items */
+  line-height: 1.5;
+  margin-bottom: 1rem; /* Equivalent to space-y-4 (4 * 0.25rem = 1rem bottom margin for each list item) */
+  padding: 0.8rem 1rem; /* Add some padding to list items for visual separation */
+  background-color: var(--background-dark); /* Subtle background for list items */
+  border-left: 4px solid var(--primary-color); /* A strong left border for emphasis */
+  border-radius: 4px; /* Slight rounding of corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+/* Remove bottom margin from the last list item to prevent excess space */
+.get-involved-list li:last-child {
+  margin-bottom: 0;
+}
+
+.get-involved-list li strong {
+  color: var(--primary-color); /* Emphasize the strong text with primary color */
+  font-weight: 700; /* Ensure it's bold */
+  margin-right: 0.5rem; /* Space between strong and description */
+}
+
+
+/* --- Responsive Adjustments for Get Involved Page --- */
+@media (max-width: 768px) {
+  .get-involved-section-container {
+    padding: 2.5rem 1.25rem; /* Adjust padding for tablets */
+    max-width: 90%; /* Allow wider content on tablets */
+  }
+
+  .get-involved-heading {
+    font-size: 1.8em;
+  }
+
+  .get-involved-intro-paragraph {
+    font-size: 1em;
+  }
+
+  .get-involved-list li {
+    font-size: 1em;
+    padding: 0.7rem 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .get-involved-section-container {
+    padding: 2rem 1rem; /* Further adjust padding for mobile */
+  }
+
+  .get-involved-heading {
+    font-size: 1.6em;
+  }
+
+  .get-involved-intro-paragraph {
+    text-align: left; /* Maybe left-align on very small screens if center feels awkward */
+  }
+
+  .get-involved-list li {
+    border-left-width: 3px; /* Slightly thinner border on mobile */
+  }
+}

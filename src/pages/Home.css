@@ -1,0 +1,117 @@
+/* ---------- Root tokens ---------- */
+:root {
+  --clr-bg: #ffffff;
+  --clr-primary: #0f766e;        /* teal-700 */
+  --clr-primary-dark: #134e4a;
+  --clr-text: #111827;           /* gray-900 */
+  --clr-muted: #6b7280;          /* gray-500 */
+  --ff-base: "Inter", system-ui, sans-serif;
+  --fw-normal: 400;
+  --fw-semibold: 600;
+
+  --max-width: 70rem;
+  --section-padding: clamp(2rem, 6vw, 5rem);
+}
+
+/* ---------- Reset & base ---------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  font-family: var(--ff-base);
+  color: var(--clr-text);
+  background: var(--clr-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg { display: block; max-width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+/* ---------- Layout helpers ---------- */
+.container {
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+}
+
+/* ---------- Intro section ---------- */
+.intro {
+  padding-block: var(--section-padding);
+  text-align: center;
+}
+
+.intro__heading {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: var(--fw-semibold);
+  line-height: 1.2;
+  max-width: 25ch;
+  margin-inline: auto;
+}
+
+.intro__text {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  max-width: 55ch;
+  margin: 1.25rem auto 2rem;
+  color: var(--clr-muted);
+}
+
+/* ---------- Button ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: var(--fw-semibold);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.btn--primary {
+  background: var(--clr-primary);
+  color: #fff;
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -4px rgb(15 118 110 / .45);
+  background: var(--clr-primary-dark);
+}
+
+/* ---------- Impact strip (simple grid) ---------- */
+.impact {
+  padding: var(--section-padding);
+  background: #f9fafb;
+}
+
+.impact__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.impact__number {
+  font-size: 2.5rem;
+  font-weight: var(--fw-semibold);
+  color: var(--clr-primary);
+}
+
+.impact__label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--clr-muted);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 2.5rem 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--clr-muted);
+}

@@ -1,0 +1,129 @@
+/* ---------- CSS Variables ---------- */
+:root {
+  --clr-bg: #ffffff;
+  --clr-text: #111827;
+  --clr-primary: #0d9488;
+  --clr-muted: #6b7280;
+  --clr-surface: #f9fafb;
+  --radius: 0.75rem;
+  --transition: 0.3s ease;
+  --max-w: 72rem;
+  --section-pad: clamp(3rem, 8vw, 6rem);
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--clr-text);
+  background: var(--clr-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Layout helpers ---------- */
+.container {
+  width: min(100% - 2rem, var(--max-w));
+  margin-inline: auto;
+}
+.section { padding-block: var(--section-pad); }
+.grid-2 {
+  display: grid;
+  gap: 2.5rem;
+}
+@media (min-width: 48em) {
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background: linear-gradient(135deg, #d2d1d5 0%, #6a5aa7 100%);
+  color: #fff;
+  text-align: center;
+}
+.hero__title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.hero__tagline {
+  max-width: 45ch;
+  margin: 1rem auto 0;
+  font-size: 1.125rem;
+  opacity: 0.9;
+}
+
+/* ---------- Glass card ---------- */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.btn--primary {
+  background: var(--clr-primary);
+  color: #fff;
+}
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(13, 148, 136, 0.5);
+}
+
+/* ---------- Cards & grids ---------- */
+.card {
+  background: var(--clr-surface);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow var(--transition);
+}
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.objectives-grid,
+.programme-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.objectives-grid {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+.programme-grid {
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+
+/* ---------- Typography ---------- */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+h3,
+h4 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+p,
+li {
+  font-size: 1rem;
+  color: var(--clr-muted);
+}

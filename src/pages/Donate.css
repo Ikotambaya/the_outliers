@@ -1,0 +1,266 @@
+/* Donate.css */
+
+/* --- Donate Section Container --- */
+.donate-section-container {
+  padding: 130px 1.5rem 4rem;
+  max-width: 700px; /* Slightly adjusted max-width for content */
+  margin: 2rem auto; /* Added top/bottom margin to separate from other content */
+  background-color: var(--background-light); /* Assuming cards are light, section background can be light too */
+  color: var(--text-color-dark);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center content within the section */
+  border: 1px solid var(--border-color);
+}
+
+/* --- Donate Heading --- */
+.donate-heading {
+  font-size: 3em;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Donate Intro Paragraph --- */
+.donate-intro-paragraph {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: var(--text-color-dark);
+  margin-bottom: 2.5rem; /* More space before the input group */
+  max-width: 600px; /* Limit paragraph width for readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Donation Input Group --- */
+.donation-input-group {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items within the group */
+  gap: 1rem; /* Space between label, input, buttons */
+}
+
+.donate-label {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--primary-color-dark);
+  margin-bottom: 0.5rem;
+  display: block; /* Ensure label takes full width */
+  text-align: center;
+}
+
+.donate-amount-wrapper {
+  position: relative;
+  width: 100%; /* Take full available width */
+  max-width: 300px; /* Max width for the input field */
+  margin-bottom: 0.5rem;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4em;
+  color: var(--text-color-medium);
+  font-weight: 600;
+}
+
+.donate-amount-input,
+.donate-email-input {
+  width: calc(100% - 30px); /* Adjust width for padding and symbol */
+  padding: 12px 15px 12px 40px; /* Left padding for currency symbol */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--text-color-dark);
+  background-color: var(--background-light);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  -moz-appearance: textfield; /* Remove number input arrows in Firefox */
+}
+
+/* Remove number input arrows in Chrome, Safari, Edge */
+.donate-amount-input::-webkit-outer-spin-button,
+.donate-amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.donate-amount-input:focus,
+.donate-email-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.2); /* Soft focus ring */
+}
+
+.donate-email-input {
+  width: calc(100% - 30px); /* For consistency */
+  max-width: 400px; /* Wider for email */
+  padding: 12px 15px; /* Standard padding without symbol */
+  margin-bottom: 0.5rem; /* Space before button */
+}
+
+
+.quick-amounts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin-top: 1rem; /* Space above quick select buttons */
+  margin-bottom: 1.5rem; /* Space below quick select buttons */
+}
+
+.quick-amount-button {
+  background-color: var(--background-light);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 8px 15px;
+  border-radius: 20px; /* Pill-shaped buttons */
+  font-size: 0.95em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-amount-button:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  transform: translateY(-2px);
+}
+
+.quick-amount-button.active {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(var(--primary-color-rgb), 0.3);
+}
+
+/* --- Donate Button --- */
+.donate-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.3em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem; /* Space above the main donate button */
+}
+
+.donate-button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Disclaimer --- */
+.donate-disclaimer {
+  font-size: 0.85em;
+  color: var(--text-color-medium);
+  margin-top: 2rem;
+  line-height: 1.4;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .donate-section-container {
+    padding: 3rem 1.5rem;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+  }
+
+  .donate-heading {
+    font-size: 2.5em;
+  }
+
+  .donate-intro-paragraph {
+    font-size: 1em;
+    margin-bottom: 2rem;
+  }
+
+  .donate-amount-input,
+  .donate-email-input {
+    font-size: 1.1em;
+    padding: 10px 15px 10px 40px;
+  }
+
+  .currency-symbol {
+    font-size: 1.2em;
+  }
+
+  .quick-amounts-container {
+    gap: 8px;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .quick-amount-button {
+    padding: 7px 12px;
+    font-size: 0.9em;
+  }
+
+  .donate-button {
+    padding: 0.8rem 2rem;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .donate-section-container {
+    padding: 2rem 1rem;
+    margin: 1rem auto;
+  }
+
+  .donate-heading {
+    font-size: 2em;
+  }
+
+  .donate-intro-paragraph {
+    font-size: 0.95em;
+  }
+
+  .quick-amounts-container {
+    flex-direction: column; /* Stack buttons vertically on very small screens */
+    gap: 5px;
+  }
+
+  .quick-amount-button {
+    width: 80%; /* Make them wider */
+    margin: 0 auto; /* Center them */
+  }
+
+  .donate-amount-input,
+  .donate-email-input {
+    width: calc(100% - 20px); /* Adjust width for smaller screens */
+    padding: 10px; /* Remove symbol padding if stacking */
+  }
+
+  .currency-symbol {
+    position: static; /* Reset position */
+    transform: none; /* Reset transform */
+    margin-right: 5px; /* Add space next to input */
+    font-size: 1.1em;
+  }
+
+  .donate-amount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .donate-button {
+    font-size: 1.1em;
+    padding: 0.7rem 1.8rem;
+    width: 90%; /* Make button wider */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

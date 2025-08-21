@@ -1,0 +1,75 @@
+/* ---------- Page Variables ---------- */
+:root {
+  --bg: #f8fafc;
+  --text: #1e293b;
+  --muted: #475569;
+  --card-bg: #ffffff;
+  --border: #e2e8f0;
+  --accent: #4f46e5;
+  --radius: 0.75rem;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- Section Wrapper ---------- */
+.programs-section-container {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 130px 1.5rem 4rem;
+}
+
+/* ---------- Heading ---------- */
+.programs-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* ---------- Grid ---------- */
+.programs-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Card ---------- */
+.program-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Card Content ---------- */
+.program-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.75rem;
+}
+
+.program-card-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ---------- Responsive Tweak ---------- */
+@media (max-width: 600px) {
+  .programs-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
